@@ -31,7 +31,7 @@ def load_test_data(dataset_path="data/threat_dataset.json"):
 
 def evaluate_firewall(firewall, test_cases):
     """Évalue le firewall sur tous les cas de test"""
-    print("🧪 Lancement de l'évaluation...")
+    print("Lancement de l'évaluation...")
     
     results = []
     latencies = []
@@ -54,7 +54,7 @@ def evaluate_firewall(firewall, test_cases):
         
         latencies.append(result['latency_ms'])
     
-    print("\n✅ Évaluation terminée!")
+    print("\nÉvaluation terminée!")
     return results, latencies
 
 

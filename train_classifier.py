@@ -122,7 +122,7 @@ def train_model(train_loader, val_loader, num_epochs=50):
         if val_acc > best_val_acc:
             best_val_acc = val_acc
             Path("models").mkdir(exist_ok=True)
-            torch.save(model.state_dict(), "models/dl_classifier. pt")
+            torch.save(model.state_dict(), "models/dl_classifier.pt")
         
         if (epoch + 1) % 10 == 0:
             print(f"Epoch [{epoch+1}/{num_epochs}] - Train Loss: {train_loss/len(train_loader):.4f} - Train Acc: {train_acc:.2f}% - Val Acc: {val_acc:.2f}%")

@@ -13,9 +13,9 @@
 
 | Statistique | Valeur |
 |-------------|--------|
-| **Latence moyenne** | 10.59 ms |
+| **Latence moyenne** | 21.35 ms |
 | **Latence min** | 0.00 ms |
-| **Latence max** | 23.88 ms |
+| **Latence max** | 79.34 ms |
 
 ## 📈 Matrice de Confusion
 
@@ -71,5 +71,5 @@ Réel Positif         0                  45
 
 ---
 
-**Rapport généré le:** 2025-12-30 14:22:36
+**Rapport généré le:** 2025-12-30 21:56:05
 **Version:** LLM Firewall v2.0
