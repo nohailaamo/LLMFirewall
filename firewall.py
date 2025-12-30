@@ -379,7 +379,7 @@ class LLMFirewall:
                 'is_threat': is_threat,
                 'category': predicted_label if is_threat else None,
                 'confidence': confidence_score,
-                'reason': f'DL model prediction: {predicted_label} (confidence: {confidence_score:. 2%})'
+                'reason': f'DL model prediction: {predicted_label} (confidence: {confidence_score:.2%})'
             }
         except Exception as e:
             print(f"⚠️ Erreur DL model: {e}")

@@ -148,7 +148,7 @@ def generate_report(metrics, latencies, results, output_path="reports/evaluation
     if false_positives:
         for i, fp in enumerate(false_positives[: 3], 1):
             report += f"**{i}.** `{fp['prompt'][:60]}...`\n"
-            report += f"   - Confiance: {fp['confidence']:. 2%}\n"
+            report += f"   - Confiance: {fp['confidence']:.2%}\n"
             report += f"   - Méthode: {fp['method']}\n\n"
     else:
         report += "✅ Aucun faux positif détecté!\n\n"
@@ -166,7 +166,7 @@ def generate_report(metrics, latencies, results, output_path="reports/evaluation
     
     report += "\n---\n\n"
     report += f"**Rapport généré le:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n"
-    report += "**Version:** LLM Firewall v2.0\n"
+    report += "**Version:** LLM Firewall\n"
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(report)
