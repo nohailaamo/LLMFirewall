@@ -1,0 +1,37 @@
+# Configuration du LLM Firewall v2.0
+firewall:
+  # Seuil de similarité sémantique (0.0 - 1.0)
+  semantic_threshold: 0.65
+  
+  # Activation des modules
+  enable_rules: true
+  enable_semantic:  true
+  enable_dl_model: true        # ← NOUVEAU
+  enable_rewriting: true
+  
+  # Mode de sécurité
+  security_mode: "balanced"  # strict, balanced, permissive
+  
+  # Seuils par mode
+  thresholds:
+    strict: 0.50
+    balanced: 0.65
+    permissive: 0.80
+
+# Modèle d'embeddings
+model:
+  name: "all-MiniLM-L6-v2"  # Léger et rapide
+  cache_dir: "./models"
+
+# Modèle DL Classifier
+dl_model:
+  path: "models/dl_classifier.pt"
+  architecture: "MLP"
+  input_dim: 384
+  hidden_dim: 128
+  num_classes: 4
+
+# Logging
+logging:
+  enabled: true
+  level: "INFO"
